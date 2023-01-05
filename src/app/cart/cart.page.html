@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="'/home'">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let m of list">
+    <ion-item>
+      <ion-avatar>
+        <ion-img [src]="m.imgurl"></ion-img>
+      </ion-avatar>
+      <ion-title>{{m.title}}</ion-title>
+      <p>{{m.cost}}</p>
+    </ion-item>
+  </ion-list>
+  <h2>grandtotal :{{cost}}$</h2>
+
+
+</ion-content>
